@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HelloWebController {
     @GetMapping("/web")
-    public String hello(){
+    public String hello() {
         return "hello";
     }
+
     @GetMapping("/message")
-    public String message (Model model) {
+    public String message(Model model) {
         model.addAttribute("message", "This is a custom message");
         return "message";
     }
